@@ -1,24 +1,5 @@
-/*
-  TravelMate client-side logic with Supabase
-
-  사용 전 확인:
-  1. 모든 HTML 파일에서 script.js보다 먼저 Supabase CDN을 불러와야 합니다.
-     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-     <script defer src="script.js"></script>
-
-  2. 아래 SUPABASE_URL, SUPABASE_ANON_KEY를 본인 프로젝트 값으로 바꾸세요.
-
-  3. Supabase 테이블 이름:
-     destinations
-     match_groups
-     match_members
-     bookings
-     reviews
-     messages
-*/
-
-const SUPABASE_URL = "여기에_Supabase_Project_URL";
-const SUPABASE_ANON_KEY = "여기에_Supabase_Anon_Key";
+const SUPABASE_URL = "https://fnwlvhjovayghwxuagkp.supabase.co";
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZud2x2aGpvdmF5Z2h3eHVhZ2twIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkyMTE5MzYsImV4cCI6MjA5NDc4NzkzNn0.h7OgGksNauSEd5imj3ojS82T3AWs-zGLinszg_GuBh8";
 
 const supabase = window.supabase.createClient(
   SUPABASE_URL,

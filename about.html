@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>About TravelMate</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body data-page="about">
+
+<header>
+  <h1>TravelMate</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="destinations.html">Destinations</a>
+    <a href="matching.html">Matching</a>
+    <a href="booking.html">Booking</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="chat.html">Chat</a>
+    <a href="about.html">About</a>
+    <div class="auth-buttons" id="authButtons">
+      <button class="signin-btn" onclick="openSignin()">Sign In</button>
+      <button class="signup-btn" onclick="openSignup()">Sign Up</button>
+    </div>
+    <div class="user-menu" id="userMenu">
+      <span id="userGreeting"></span>
+      <button class="logout-btn" onclick="logout()">로그아웃</button>
+    </div>
+  </nav>
+</header>
+
+<main class="page-container">
+  <h2 style="color:#2563eb; text-align:center;">TravelMate 소개</h2>
+  <p style="margin-bottom:20px;">
+    TravelMate는 여행자들이 쉽고 안전하게 여행 동행자를 찾고, 여행을 계획하고, 경험을 공유할 수 있도록 돕는 플랫폼입니다.
+    아름다운 여행지 소개부터 맞춤 매칭, 간편 예약, 후기 작성까지 여행 준비의 모든 과정을 하나의 사이트에서 해결하세요.
+  </p>
+  <h3 style="color:#2563eb;">우리가 추구하는 가치</h3>
+  <ul style="line-height:1.8; padding-left:20px;">
+    <li><strong>모바일 친화적이고 반응형 디자인:</strong> 휴대폰과 태블릿에서도 원활하게 이용할 수 있도록 최적화되어 있습니다.</li>
+    <li><strong>편리한 검색과 필터:</strong> 여행지와 동행자를 쉽고 빠르게 찾을 수 있도록 다양한 필터를 제공합니다.</li>
+    <li><strong>정확한 정보와 결과:</strong> 관심있는 여행지의 핵심 정보를 제공하고, 매칭 결과와 예약 비용을 명확하게 안내합니다.</li>
+    <li><strong>고품질 이미지와 후기:</strong> 실제 여행자의 후기를 통해 믿을 수 있는 정보를 얻고, 아름다운 사진과 함께 여행을 설계할 수 있습니다.</li>
+  </ul>
+  <h3 style="color:#2563eb;">연락처</h3>
+  <p>질문이나 제안이 있으시면 언제든 <a href="mailto:info@travelmate.com">info@travelmate.com</a>으로 연락주세요.</p>
+  <h3 style="color:#2563eb;">참고</h3>
+  <p style="font-size:14px; color:#6b7280;">
+    본 사이트의 여행지 설명은 위키백과의 각 도시 항목을 참고하여 작성되었습니다. 부산은 한국에서 두 번째로 큰 도시이며 활기찬 항구와 해변으로 유명합니다. 서울은 한국의 수도이자 최대 도시로서 문화와 경제의 중심지입니다. 제주도는 화산 활동으로 형성된 한국 최대의 섬으로 온난한 기후와 아름다운 자연을 자랑합니다.
+  </p>
+</main>
+
+<!-- Sign In Modal -->
+<div id="signinModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeSignin()">&times;</span>
+    <h2>Sign In</h2>
+    <input type="text" id="signinId" placeholder="아이디">
+    <input type="password" id="signinPw" placeholder="비밀번호">
+    <button onclick="login()">로그인</button>
+  </div>
+</div>
+<!-- Sign Up Modal -->
+<div id="signupModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeSignup()">&times;</span>
+    <h2>Sign Up</h2>
+    <input type="text" id="signupName" placeholder="이름">
+    <input type="text" id="signupId" placeholder="아이디">
+    <input type="password" id="signupPw" placeholder="비밀번호">
+    <input type="number" id="signupAge" placeholder="나이">
+    <button onclick="signup()">회원가입</button>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>TravelMate Destinations</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body data-page="destinations">
+
+<header>
+  <h1>TravelMate</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="destinations.html">Destinations</a>
+    <a href="matching.html">Matching</a>
+    <a href="booking.html">Booking</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="chat.html">Chat</a>
+    <a href="about.html">About</a>
+    <div class="auth-buttons" id="authButtons">
+      <button class="signin-btn" onclick="openSignin()">Sign In</button>
+      <button class="signup-btn" onclick="openSignup()">Sign Up</button>
+    </div>
+    <div class="user-menu" id="userMenu">
+      <span id="userGreeting"></span>
+      <button class="logout-btn" onclick="logout()">로그아웃</button>
+    </div>
+  </nav>
+</header>
+
+<main class="page-container">
+  <h2 style="color:#2563eb; text-align:center;">여행지 탐색</h2>
+  <div style="text-align:center; margin-bottom:20px;">
+    <input type="text" id="destinationSearch" placeholder="여행지 검색" style="padding:8px; width:60%; max-width:300px; border-radius:6px; border:1px solid #ccc;">
+  </div>
+  <div id="destinationsContainer" class="destinations-container"></div>
+</main>
+
+<!-- Sign In Modal -->
+<div id="signinModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeSignin()">&times;</span>
+    <h2>Sign In</h2>
+    <input type="text" id="signinId" placeholder="아이디">
+    <input type="password" id="signinPw" placeholder="비밀번호">
+    <button onclick="login()">로그인</button>
+  </div>
+</div>
+<!-- Sign Up Modal -->
+<div id="signupModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeSignup()">&times;</span>
+    <h2>Sign Up</h2>
+    <input type="text" id="signupName" placeholder="이름">
+    <input type="text" id="signupId" placeholder="아이디">
+    <input type="password" id="signupPw" placeholder="비밀번호">
+    <input type="number" id="signupAge" placeholder="나이">
+    <button onclick="signup()">회원가입</button>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+{
+  "users": [
+    {
+      "id": "test1",
+      "pw": "pass",
+      "name": "Test User",
+      "age": 30
+    }
+  ],
+  "destinations": [
+    {
+      "name": "Busan",
+      "description": "부산은 대한민국에서 두 번째로 인구가 많은 도시이며, 활기찬 항구와 아름다운 해변으로 유명합니다.",
+      "baseCost": 80000,
+      "image": "busan.jpg"
+    },
+    {
+      "name": "Seoul",
+      "description": "서울은 한국의 수도이자 최대 도시로, 현대적인 빌딩과 고궁이 공존하는 문화와 경제의 중심지입니다.",
+      "baseCost": 90000,
+      "image": "seoul.jpg"
+    },
+    {
+      "name": "Jeju",
+      "description": "제주도는 화산 활동으로 형성된 한국 최대의 섬으로, 온난한 기후와 아름다운 자연 경관을 자랑하는 휴양지입니다.",
+      "baseCost": 100000,
+      "image": "jeju.jpg"
+    }
+  ],
+  "matches": [
+    {
+      "groupId": "group-1779191247502",
+      "destination": "Busan",
+      "style": "맛집 탐방",
+      "peopleCount": 3,
+      "members": [
+        "test1"
+      ]
+    }
+  ],
+  "requests": [
+    {
+      "userId": "test1",
+      "destination": "Busan",
+      "style": "맛집 탐방",
+      "peopleCount": 3,
+      "groupId": "group-1779191247502",
+      "status": "waiting"
+    }
+  ],
+  "bookings": [
+    {
+      "userId": "test1",
+      "destination": "Busan",
+      "startDate": "2026-05-01",
+      "endDate": "2026-05-03",
+      "travelers": 2,
+      "cost": 80000
+    }
+  ],
+  "reviews": [
+    {
+      "userId": "test1",
+      "destination": "Busan",
+      "rating": 5,
+      "comment": "좋은 곳입니다",
+      "timestamp": 1779191292383
+    }
+  ],
+  "messages": {
+    "group-1779191247502": [
+      {
+        "userId": "test1",
+        "text": "안녕하세요",
+        "timestamp": 1779191265529
+      }
+    ]
+  }
+}

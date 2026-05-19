@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>TravelMate Matching</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body data-page="matching">
+
+<header>
+  <h1>TravelMate</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="destinations.html">Destinations</a>
+    <a href="matching.html">Matching</a>
+    <a href="booking.html">Booking</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="chat.html">Chat</a>
+    <a href="about.html">About</a>
+    <div class="auth-buttons" id="authButtons">
+      <button class="signin-btn" onclick="openSignin()">Sign In</button>
+      <button class="signup-btn" onclick="openSignup()">Sign Up</button>
+    </div>
+    <div class="user-menu" id="userMenu">
+      <span id="userGreeting"></span>
+      <button class="logout-btn" onclick="logout()">로그아웃</button>
+    </div>
+  </nav>
+</header>
+
+<main class="page-container">
+  <h2 style="color:#2563eb; text-align:center;">동행자 매칭</h2>
+  <p style="text-align:center; margin-bottom:24px;">여행 스타일과 인원수를 선택하여 동행자를 찾아보세요.</p>
+  <div class="matching-form">
+    <label for="destinationSelect">여행지</label>
+    <select id="destinationSelect">
+      <option value="Busan">부산</option>
+      <option value="Seoul">서울</option>
+      <option value="Jeju">제주</option>
+    </select>
+    <label for="travelStyle">여행 스타일</label>
+    <select id="travelStyle">
+      <option value="맛집 탐방">맛집 탐방</option>
+      <option value="자연 여행">자연 여행</option>
+      <option value="사진 여행">사진 여행</option>
+      <option value="액티비티">액티비티</option>
+    </select>
+    <label for="peopleCount">원하는 총 인원</label>
+    <select id="peopleCount">
+      <option value="2">2명</option>
+      <option value="3">3명</option>
+      <option value="4">4명</option>
+      <option value="5">5명</option>
+    </select>
+    <button onclick="applyMatching()">매칭 신청</button>
+    <div id="matchResult" class="matching-result">매칭 결과가 여기에 표시됩니다.</div>
+  </div>
+</main>
+
+<!-- Sign In Modal -->
+<div id="signinModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeSignin()">&times;</span>
+    <h2>Sign In</h2>
+    <input type="text" id="signinId" placeholder="아이디">
+    <input type="password" id="signinPw" placeholder="비밀번호">
+    <button onclick="login()">로그인</button>
+  </div>
+</div>
+<!-- Sign Up Modal -->
+<div id="signupModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeSignup()">&times;</span>
+    <h2>Sign Up</h2>
+    <input type="text" id="signupName" placeholder="이름">
+    <input type="text" id="signupId" placeholder="아이디">
+    <input type="password" id="signupPw" placeholder="비밀번호">
+    <input type="number" id="signupAge" placeholder="나이">
+    <button onclick="signup()">회원가입</button>
+  </div>
+</div>
+
+</body>
+</html>

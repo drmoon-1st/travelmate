@@ -31,6 +31,24 @@
   </nav>
 </header>
 
+<section class="booking-form" style="margin-bottom: 30px;">
+  <h2>여행지 등록</h2>
+
+  <label for="destinationName">여행지 이름</label>
+  <input id="destinationName" type="text" placeholder="예: Tokyo">
+
+  <label for="destinationDescription">설명</label>
+  <input id="destinationDescription" type="text" placeholder="여행지 설명">
+
+  <label for="destinationBaseCost">1인 1일 기본 비용</label>
+  <input id="destinationBaseCost" type="number" placeholder="예: 120000">
+
+  <label for="destinationImage">이미지 파일명 또는 URL</label>
+  <input id="destinationImage" type="text" placeholder="예: tokyo.jpg 또는 https://...">
+
+  <button onclick="addDestination()">여행지 등록</button>
+</section>
+
 <main class="page-container">
   <h2 style="color:#2563eb; text-align:center;">여행지 탐색</h2>
   <div style="text-align:center; margin-bottom:20px;">
